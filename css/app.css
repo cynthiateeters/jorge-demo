@@ -1,0 +1,184 @@
+/* custom properties */
+
+:root {
+  /* color theme */
+  /* text colors */
+  --text-light: #ffffff;
+
+  /* background colors */
+  --base-hue: 6.13;
+  --base-sat: 73.23%;
+  --base-lght: 49.8%;
+
+  /* any number to modify colors */
+  --your-number: 0.4;
+
+  --color1: hsl(
+    var(--base-hue),
+    calc(var(--base-sat) * (calc(var(--your-number) * 1))),
+    calc(var(--base-lght) * (calc(var(--your-number) * 1)))
+  );
+
+  --color2: hsl(
+    var(--base-hue),
+    calc(var(--base-sat) * (calc(var(--your-number) * 1.5))),
+    calc(var(--base-lght) * (calc(var(--your-number) * 1.5)))
+  );
+
+  --color3: hsl(
+    var(--base-hue),
+    calc(var(--base-sat) * (calc(var(--your-number) * 2))),
+    calc(var(--base-lght) * (calc(var(--your-number) * 2)))
+  );
+
+  --color4: hsl(
+    var(--base-hue),
+    calc(var(--base-sat) * (calc(var(--your-number) * 2.5))),
+    calc(var(--base-lght) * (calc(var(--your-number) * 2.5)))
+  );
+
+  --color5: hsl(
+    var(--base-hue),
+    calc(var(--base-sat) * (calc(var(--your-number) * 3))),
+    calc(var(--base-lght) * (calc(var(--your-number) * 3)))
+  );
+}
+
+.defs-only {
+  display: none;
+}
+
+/* body */
+
+.body {
+  color: var(--text-light, #ffffff);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* declearing font-face */
+@font-face {
+  font-family: myFirstFont;
+  src: url(../font/Orbitron-VariableFont_wght.ttf);
+  font-style: normal;
+  font-weight: 100 900;
+}
+/* 
+@font-face {
+    font-family: myFirstFont;
+    src: url(../font/static/Orbitron-Regular.ttf);
+    font-style: normal;
+    font-weight: 100;
+    
+} */
+
+/* h1 */
+
+.slide__title {
+  font-family: myFirstFont;
+  font-size: 39px;
+  font-weight: 300;
+  text-align: center;
+}
+
+/* p */
+
+.slide__text {
+  font-family: myFirstFont;
+  font-size: 100%;
+  font-weight: 100;
+  column-count: 2;
+  column-gap: 80px;
+  column-rule-style: solid;
+  column-rule-width: 1px;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+/* backgrounds */
+
+.slide--color1 {
+  background-color: var(--color1, hsl(240, 20%, 20%));
+  height: 100vh;
+  padding-top: 15px;
+}
+
+.slide--color2 {
+  background-color: var(--color2, hsl(240, 20%, 20%));
+  height: 100vh;
+  padding-top: 15px;
+}
+
+.slide--color3 {
+  background-color: var(--color3, hsl(240, 20%, 20%));
+  height: 100vh;
+  padding-top: 15px;
+}
+
+.slide--color4 {
+  background-color: var(--color4, hsl(240, 20%, 20%));
+  height: 100vh;
+  padding-top: 15px;
+}
+
+.slide--color5 {
+  background-color: var(--color5, hsl(240, 20%, 20%));
+  height: 100vh;
+  padding-top: 15px;
+}
+
+/* link */
+
+.slide__buttons {
+  color: var(--text-light, #ffffff);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+symbol {
+  fill: rgb(14, 241, 223);
+}
+
+h4 {
+  background-color: none;
+}
+
+.icon--color {
+  background-color: none;
+  padding-left: 4%;
+  margin-left: 1%;
+}
+
+.slide__button {
+  background-color: none;
+  color: rgb(14, 241, 223);
+  border-radius: 7px;
+  text-decoration: none;
+  font-size: 25px;
+  max-width: 50%;
+  margin: auto;
+  display: flex;
+}
+
+.slide__button--prev {
+}
+
+.slide__button--next {
+}
+
+a:hover {
+  background-color: black;
+  color: rgb(14, 241, 223);
+  cursor: pointer;
+}
+
+a:active {
+  box-shadow: none;
+  top: 4px;
+}
+
+span {
+  width: 8rem;
+  margin-top: 2rem;
+}
